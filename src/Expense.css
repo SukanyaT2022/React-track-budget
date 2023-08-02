@@ -1,0 +1,17 @@
+.expense_wrapper{
+    background-color: lightseagreen;
+    border-radius: 4px;
+    padding:10px;
+    margin: 15px;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price{
+    font-size: 1.5rem;
+    background-color: darkred;
+    padding:15px;
+    border-radius: 5px;
+}
