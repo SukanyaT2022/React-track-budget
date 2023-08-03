@@ -1,18 +1,24 @@
-import './Expense.css'
+import Form from './Form';
+import './Expense.css';
 
 const Expense = (props) => {
-   const data = props.onData[0];
+  const data = props.onData;
   return (
-    <div className="expense_wrapper">
-        <div>
-            <h1 className="title">{data.title}</h1>
-            <div className="date">{data.date}</div>
+    <div>
+      <Form/>                                                                                                            
+      {data.map((item) => (
+        <div key={item.id} className="expense_wrapper">
+          <div>
+            <h1 className="title">{item.title}</h1>
+            <div className="date">{item.date}</div>
+          </div>
+          <div>
+            <span className="price">{`$${item.price}`}</span>
+          </div>
         </div>
-        <div>
-            <span className="price">{data.price}</span>
-        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Expense
+export default Expense;

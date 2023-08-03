@@ -22,13 +22,13 @@ const App = () => {
       price:35
     }
   ]
-  // const senddata2child =()=>{
-
-  // }
+  // const senddata2child =()=>{// }
   //function we made when we receive data from child
   return (
     <div>
+      
       <Expense onData={data} />
+      
     </div>
   )
 }
