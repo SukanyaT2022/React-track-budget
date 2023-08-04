@@ -1,11 +1,18 @@
 import Form from './Form';
 import './Expense.css';
+import { useState } from 'react';
 
 const Expense = (props) => {
-  const data = props.onData;
+  const [data, setData] = useState(props.onData);
+
+  const formData = (obj) => {
+    //...give previous cply old value andmeerge wth new new object
+    setData((prevData) => [...prevData, obj]);
+  };
   return (
     <div>
-      <Form/>                                                                                                            
+      {/* //form.ja */}
+      <Form onFormData={formData} />
       {data.map((item) => (
         <div key={item.id} className="expense_wrapper">
           <div>
